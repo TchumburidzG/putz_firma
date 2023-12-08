@@ -1,19 +1,13 @@
 import './App.css';
 import headerImg from "./assets/images/header.png";
-//import Header from "./components/Header/Header"
 import { useEffect, useState } from 'react';
-
-
-
-
-
+import Wellcome from "./components/Wellcome/Wellcome"
 function App() {
   const [scrollY, setScrollY] = useState(0);
-  const [isImageVisible, setIsImageVisible] = useState(true);
+
   const handleScroll = () => {
     setScrollY(window.scrollY);
   };
-  const headerHeight = 100;
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -21,41 +15,35 @@ function App() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+  const headerHeight = 400;
+  const minImageHeight = 10;
+  const navigationHeight = 10;
 
-  useEffect(() => {
-    setIsImageVisible(scrollY < 200);
-  }, [scrollY]);
+  const imageHeight = Math.max(headerHeight - scrollY, minImageHeight);
 
   return (
-
     <div className="App">
       <div className="header-container">
-      <div
-        id="header"
-        className="image-container"
-        style={{ height: `${headerHeight}px`, overflow: 'hidden' }}
-      >
-        {isImageVisible && (
-          <>
-            <h1 className="name"> Ouzeria </h1>
-            <img src={headerImg} alt="Header" style={{ width: '100%', objectFit: 'cover' }} />
-          </>
-        )}
+        <div className="image-container" style={{ height: `${imageHeight}px`, overflow: 'hidden' }}>
+          {imageHeight > minImageHeight && (
+            <>
+              <h1 className="name"> Ouzeria </h1>
+              <img src={headerImg} alt="Header" style={{ width: '100%', objectFit: 'cover' }} />
+            </>
+          )}
+        </div>
       </div>
-          <div className="navigation"> 
-              <a className="btn">Startseite</a>
-              <a className="btn">Speisekarte</a>
-              <a className="btn">Über uns</a>
-              <a className="btn" href="https://ouzeria.leaftoken.io/" target='_blank'>Bestellug</a>
-              <a className="btn">Kontakt</a>
-          </div>
-      </div>
-      <div>
-        <p>besika</p><p>besika</p><p>besika</p><p>besika</p>
-        <p>besika</p><p>besika</p><p>besika</p><p>besika</p>
-        <p>besika</p><p>besika</p><p>besika</p><p>besika</p>
-        <p>besika</p><p>besika</p><p>besika</p><p>besika</p>
-        <p>besika</p><p>besika</p><p>besika</p><p>besika</p>
+      
+        <div className="navigation" > 
+          <a className="btn">Startseite</a>
+          <a className="btn">Speisekarte</a>
+          <a className="btn">Gästebuch</a>
+          <a className="btn" href="https://ouzeria.leaftoken.io/" target='_blank' rel='noopener noreferrer'>Bestellug</a>
+          <a className="btn">Kontakt</a>
+        </div>
+     
+      <div style={{ marginTop: `${navigationHeight}px` }}>
+        <Wellcome/>
       </div>
     
     </div>
