@@ -1,13 +1,46 @@
 .wellcome-container {
+  margin-top: 20px;
   padding: 10px 100px;
+  width: 60%;
+  display: block;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+.wellcome-text-container {
+  width: 100%;
+  display: block;
+  justify-content: center;
+  margin: 30px 20px;
+}
+
+.wellcome-title {
+  width: 100%;
+  display: block;
+  justify-content: center;
+  margin: 30px 20px;
+  font-size: 40px;
+  font-weight: 800;
+  font-family: AbriFatface sans-serif;
+  color:black;
+  letter-spacing: 2px;
 }
 
 .google-maps {
-  width: 60rem;
-  height: 30rem;
+  justify-content: center;
+  width: 100%;
+  margin: 30px 20px;
 }
 
-.besika{
-    width: 60rem;
-    height: 30rem;
+.besika {
+  width: 100%;
+  height: 400px;
+}
+
+.name-maps {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
