@@ -1,0 +1,47 @@
+.line {
+    border: solid black 1px;
+}
+
+.footer-container{
+    background-color:#33332E;
+    height: 300px;
+}
+
+.categories-container{
+    display: grid;
+    width: 100%;
+}
+
+.contact {
+    grid-column: 1;
+    color: #F1F1F1;
+}
+
+.contact h4{
+    letter-spacing: 2px;
+    padding-right: 40px;
+}
+
+.contact-info{
+    width:max-content;
+    text-align: left;
+    margin: auto;
+}
+
+.contact-info p{
+    line-height: 12px;
+}
+.address{
+    line-height: 19px;
+}
+.about-us{
+    grid-column: 2;
+}
+
+.impresum{
+    grid-column: 3;
+}
+
+.footer-titles{
+    color: #F1F1F1;
+}

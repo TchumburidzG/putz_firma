@@ -1,9 +1,12 @@
 import './App.css';
 import headerImg from "./assets/images/header.png";
 import { useEffect, useState } from 'react';
-import Wellcome from "./components/Wellcome/Wellcome"
+import Wellcome from "./components/Wellcome/Wellcome";
+import Footer from "./components/Footer/Footer";
+import Impresum from './components/Impresum/Impresum';
 function App() {
   const [scrollY, setScrollY] = useState(0);
+  
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
@@ -33,19 +36,21 @@ function App() {
           )}
         </div>
       </div>
-      
-        <div className="navigation" > 
-          <a className="btn">Startseite</a>
-          <a className="btn">Speisekarte</a>
-          <a className="btn">Gästebuch</a>
-          <a className="btn" href="https://ouzeria.leaftoken.io/" target='_blank' rel='noopener noreferrer'>Bestellug</a>
-          <a className="btn">Kontakt</a>
-        </div>
-     
-      <div style={{ marginTop: `${navigationHeight}px` }}>
-        <Wellcome/>
+
+      <div className="navigation" >
+        <a className="btn">Startseite</a>
+        <a className="btn">Speisekarte</a>
+        <a className="btn">Gästebuch</a>
+        <a className="btn" href="https://ouzeria.leaftoken.io/" target='_blank' rel='noopener noreferrer'>Bestellug</a>
+        <a className="btn">Kontakt</a>
       </div>
-    
+
+      <div style={{ marginTop: `${navigationHeight}px` }}>
+        <Wellcome />
+      </div>
+      <Footer />
+      <Impresum/>
+
     </div>
   );
 }
