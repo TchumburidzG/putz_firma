@@ -1,6 +1,6 @@
 import "./footer.css"
-//import Impresum from "../Impresum/Impresum";
-
+import Impresum from "../Impresum/Impresum";
+import Link from "../link";
 
 function Footer() {
   return (
@@ -18,14 +18,17 @@ function Footer() {
                   So finden Sie uns (Google-Link)
                 </a>
               </p>
-            
           </div>
         </div>
         <div className="about-us">
           <h4 className="footer-titles">Über uns</h4>
         </div>
         <div className="impresum">
-          <h4 className="footer-titles">Impresum</h4>
+          <h4 className="footer-titles">
+            <Link key={Impresum} to={'/impresum'} >
+              {'Impresum'}
+            </Link>
+          </h4>
         </div>
       </div>
     </div>

@@ -13,7 +13,7 @@ function Link({ to, children }) {
   };
 
   return (
-    <a href={to} onClick={handleClick}>
+    <a  href={to} onClick={handleClick}>
       {children}
     </a>
   );

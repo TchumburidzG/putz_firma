@@ -5,7 +5,7 @@ function Wellcome (){
 
     return (
         <div className="wellcome-container">
-           <h3 className="wellcome-title">Herzlich gg willkommen in der Ouzeria</h3>
+           <h3 className="wellcome-title">Herzlich willkommen in der Ouzeria</h3>
            <div className="wellcome-text-container"> 
                 <p className="text-container"> 
                     Wir laden Sie ein zu einem kulinarischen Streifzug 
