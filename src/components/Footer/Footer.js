@@ -8,7 +8,11 @@ function Footer() {
       <div className="line"></div>
       <div className="categories-container">
         <div className="contact">
-          <h4 className="footer-titles">Kontakt</h4>
+          <h4 className="footer-titles">
+          <Link key={Impresum} to={'/contact'} >
+              {'Kontakt'}
+            </Link>
+          </h4>
           <div className="contact-info">
             <p>Telefon: 0761 / 61 29 17 39 </p>
             <p>E-Mail: info@ouzeria-freiburg.de</p>

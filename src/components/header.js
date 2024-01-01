@@ -1,5 +1,4 @@
 import React from "react";
-import { useEffect, useState, useCallback } from "react";
 import headerImg from "../assets/images/header.png";
 import Link from './link';
 
@@ -14,12 +13,14 @@ function Header() {
 
   const renderedLinks = links.map((link) => {
     return (
-      <Link
-        key={link.label}
-        to={link.path}
-      >
-        {link.label}
-      </Link>
+      <a className="btn">
+        <Link
+          key={link.label}
+          to={link.path}
+        >
+          {link.label}
+        </Link>
+      </a>
     );
   });
 
@@ -31,7 +32,7 @@ function Header() {
           <img src={headerImg} alt="Header" style={{ width: '100%', objectFit: 'cover' }} />
         </div>
       </div>
-      <div className="navigation btn" >
+      <div className="navigation" >
         {renderedLinks}
         <a className="btn" href="https://ouzeria.leaftoken.io/" target='_blank' rel='noopener noreferrer'>Bestellug</a>
       </div>
