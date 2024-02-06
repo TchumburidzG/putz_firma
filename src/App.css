@@ -49,12 +49,17 @@
 }
 
 .navigation a {
-  margin: 1px 20px;
+
   padding: 10px 12px;
   font-weight: 400;
   font-size: 18px;
   color: #ffffff;
-  border-radius: 40px;
+  border-radius: 3px;
+  text-decoration: none
+}
+
+.navigation a:hover {
+  color: #376F70;
 }
 
 .btn {
@@ -63,7 +68,6 @@
   -moz-appearance: none;
   appearance: none;
   background-color: transparent;
-  border-radius: 0.6em;
   cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
@@ -75,20 +79,17 @@
   font-size: 1rem;
   font-weight: 400;
   line-height: 1;
-  padding: 1.2em 2.8em;
+
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   color: #fff;
-  box-shadow: 0 0 40px 40px #2c3e50 inset, 0 0 0 0 #3498db;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
 }
-.btn:hover,
-.btn:focus {
-  color: #fff;
-  outline: 0;
-  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+
+a {
+  text-decoration: none
 }
