@@ -30,7 +30,10 @@
 .google-maps {
   justify-content: center;
   width: 100%;
-  margin: 30px 20px;
+  justify-content: center;
+  align-self: center;
+  text-align: center;
+  margin: 30px 0px;
 }
 
 .besika {
