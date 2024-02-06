@@ -8,13 +8,8 @@
 }
 
 .categories-container{
-    display: grid;
-    width: 100%;
-}
-
-.contact {
-    grid-column: 1;
-    color: #F1F1F1;
+    display:inline-block;
+    width: 60%;
 }
 
 .contact h4{
@@ -33,13 +28,6 @@
 }
 .address{
     line-height: 19px;
-}
-.about-us{
-    grid-column: 2;
-}
-
-.impresum{
-    grid-column: 3;
 }
 
 .footer-titles{
