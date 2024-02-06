@@ -48,8 +48,8 @@
   z-index: 42;
 }
 
-.navigation a {
-
+.navigation p {
+  display: inline;
   padding: 10px 12px;
   font-weight: 400;
   font-size: 18px;

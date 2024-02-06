@@ -13,14 +13,13 @@ function Header() {
 
   const renderedLinks = links.map((link) => {
     return (
-      <a className="btn">
+      <p className="btn" key={link.label}>
         <Link
-          key={link.label}
           to={link.path}
         >
           {link.label}
         </Link>
-      </a>
+      </p>
     );
   });
 
