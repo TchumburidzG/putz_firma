@@ -26,12 +26,11 @@ function Wellcome (){
             <div className="google-maps">
                 <div className="name-maps">Finde uns auf Google maps</div>
                 <iframe className="besika" 
-                    allowfullscreen="true"
+                    allowFullScreen={true}
                     loading="eager"
-                    referrerpolicy="no-referrer-when-downgrade"
+                    referrerPolicy="no-referrer-when-downgrade"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4966.388503017338!2d7.892806100651802!3d47.981225572516465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47911d25c5127fbf%3A0xdb0509407fcafccb!2sOuzeria!5e1!3m2!1ska!2sde!4v1702056973203!5m2!1ska!2sde">
                 </iframe>
-                    
             </div>
 
         </div>

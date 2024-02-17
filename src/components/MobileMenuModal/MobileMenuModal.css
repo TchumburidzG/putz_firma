@@ -1,0 +1,154 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1050;
+  font-family: "HaufeMerriWeatherSansLt", sans-serif;
+}
+
+.popup-container {
+  position: absolute;
+  justify-content: center;
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 650px;
+  height: auto;
+  overflow: auto;
+  max-height: 650px;
+  font-family: "HaufeMerriWeatherSansLt", sans-serif;
+}
+
+.appointment-description {
+  height: auto;
+  min-height: 100px;
+  width: 100%;
+  text-align: justify;
+  text-indent: 20px;
+  line-height: 22px;
+}
+
+.title {
+
+  font-weight: 600;
+  padding-bottom: 10px;
+}
+
+.popup-header {
+  width: 100%;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(214, 225, 240, 1);
+}
+
+.popup-title {
+  padding-left: 20px;
+  font-weight: 700;
+  line-height: 44px;
+  font-size: 14px;
+  letter-spacing: 0.48px;
+  color: #45454f;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 14px;
+}
+
+.close-button:hover img {
+  filter: invert(40%) sepia(74%) saturate(1853%) hue-rotate(199deg)
+    brightness(87%) contrast(108%);
+}
+
+.close-button img {
+  width: 10px;
+  padding-top: 5px;
+}
+
+.popup-content {
+  margin: 0 10px;
+  color: rgba(102, 102, 102, 1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.links {
+  display: flex;
+  align-items: flex-start;
+  padding-top: 6px;
+}
+
+.links a{
+  text-align: left;
+  width: 74%;
+  padding-left: 10px;
+}
+
+.links div{
+  width: 26%;
+}
+
+.popup-button-container {
+  position: relative;
+  width: -webkit-fill-available;
+  background: rgba(247, 247, 248, 1);
+  bottom: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  padding: 0 14px;
+}
+
+.popup-button {
+  height: 30px;
+  padding: 0 12px;
+  margin: 12px 6px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 300;
+  white-space: nowrap;
+  cursor: pointer;
+  letter-spacing: .00625rem;
+  line-height: .9375rem;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-gap: 8px;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.popup-button.primary {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(32, 114, 230, 1);
+  border: none;
+}
+
+.popup-button.primary:hover {
+  background-color: rgb(21, 126, 251, 1);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+}
+
+.popup-button.secondary {
+  background-color: white;
+  color: rgba(32, 114, 230, 1);
+  border-width: 0.5px;
+  border-color: rgba(32, 114, 230, 1);
+}
+
+.popup-button.secondary:hover {
+  color: rgba(255, 255, 255, 1);
+  background-color: rgba(21, 126, 251, 1);
+  border-color: rgba(21, 126, 251, 1);
+  text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+}

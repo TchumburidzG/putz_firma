@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import headerImg from "../assets/images/header.png";
 import Link from './link';
+import MenuIcon from '@mui/icons-material/Menu';
 
-function Header() {
+function Header({handleMobileMenu}) {
+
 
   const links = [
     { label: 'Startseite', path: '/' },
@@ -32,8 +34,11 @@ function Header() {
         </div>
       </div>
       <div className="navigation" >
-        {renderedLinks}
-        <a className="btn" href="https://ouzeria.leaftoken.io/" target='_blank' rel='noopener noreferrer'>Bestellug</a>
+        <div className="navbar">
+          {renderedLinks}
+          <a className="btn" href="https://ouzeria.leaftoken.io/" target='_blank' rel='noopener noreferrer'>Bestellug</a>
+        </div>
+        <button className="mobile-menu" onClick={handleMobileMenu}><MenuIcon></MenuIcon></button>
       </div>
     </>
   );
