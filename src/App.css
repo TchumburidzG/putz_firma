@@ -1,119 +1,107 @@
-.App {
-  text-align: center;
-  background-color: #376f70;
-  height: 100%;
-}
+/* Add this to your existing CSS or create a new file */
 
-.header-container {
-  position: relative;
-}
 
-.image-container {
-  position: relative;
-  overflow: hidden;
-  height: 400px; /* Initial height of the image container */
-  transition: height 0.3s ease; /* Smooth transition for the height change */
-}
-
-.image-container img {
+.vertical-sidebar {
+  height: 100%; /* Stellen Sie sicher, dass die Sidebar die gesamte Höhe des Elternelements einnimmt */
   display: flex;
-  width: 100%;
-  object-fit: cover;
+  flex-direction: column; /* Ändern Sie die Ausrichtung auf vertikal */
 }
 
-.name {
+.vertical-items {
+  /* Fügen Sie bei Bedarf weitere benutzerdefinierte Stile hinzu */
+  display: flex;
+  flex-direction: column; /* Ändern Sie die Ausrichtung der Sidebar-Elemente auf vertikal */
+}
+.sidebar-container{
+  z-index: 100;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  font-size: 64px;
+  top: 0px; /* Adjust the top position as needed */
+  right: 0px; 
+  padding-top: 0px;
+  margin-top: 0;
+  height: 100%;
+  margin-top: 4rem;
+}
+
+.group {
+  background-color: rgb(240, 240, 74);
+  margin-top: 0;
+  padding: 0;
+  border-radius: 0.5rem;
+  height: 14rem;transition: transform 1s ease-in-out
+
+}
+
+.sidebar-names {
+  padding-left: 0;
+  padding-right: 0.1rem;
+  margin-left: 0;
+  color: #42A661;
+  font-size: 1rem; /* Adjust the font size as needed */
   font-weight: bold;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 10px;
-  letter-spacing: 12px;
-  z-index: 40;
+  ;
+}
+.sidebar-open {
+  transform: translateX(0); /* Slide in from right when sidebar is open */
+}
+.line {
+  border: solid black 1px;
 }
 
-.navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding: 20px;
-  background-color: #343541;
-  border: none;
-  transition: top 0.3s; /* Smooth transition for the navigation bar */
-  z-index: 42;
+.footer-container{
+  background-color:#33332E;
+  height: 300px;
 }
 
-.navigation p {
-  display: inline;
-  padding: 10px 12px;
-  font-weight: 400;
-  font-size: 18px;
-  color: #ffffff;
-  border-radius: 3px;
-  text-decoration: none
-}
-.navigation a{
-  display: inline;
-  padding: 10px 12px;
-  font-weight: 400;
-  font-size: 18px;
-  color: #ffffff;
-  border-radius: 3px;
-  text-decoration: none
+.categories-container{
+  display:inline-block;
+  width: 60%;
 }
 
-.navigation a:hover {
-  color: #376F70;
-}
-
-.btn {
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  cursor: pointer;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+.contact h4{
   letter-spacing: 2px;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
-  align-self: center;
+  padding-right: 40px;
+}
+
+.contact-info{
+  width:max-content;
+  text-align: left;
+  margin: auto;
+  margin-top: 4rem;
+}
+
+.contact-info p{
+  line-height: 13px;
   font-size: 1rem;
-  font-weight: 400;
-  line-height: 1;
-  text-decoration: none;
+}
+.address{
+  line-height: 19px;
+}
+
+.footer-titles{
+  color: #F1F1F1;
+}
+
+
+.google-maps {
+  justify-content: center;
+  width: 100%;
+  justify-content: center;
+  align-self: center;
   text-align: center;
-  text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  color: #fff;
-  -webkit-transition: all 150ms ease-in-out;
-  transition: all 150ms ease-in-out;
+  margin: 30px 0px;
+}
+.google-maps a {
+  text-decoration: none;
+}
+.besika {
+  width: 100%;
+  height: 400px;
 }
 
-
-.mobile-menu {
-  display: none;
-}
-
-@media (max-width: 760px) {
-  .navbar {
-    display: none;
-  }
-  .navigation{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-  }
-
-  .mobile-menu {
-    display: flex;
-  }
+.name-maps {
+  display: block;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

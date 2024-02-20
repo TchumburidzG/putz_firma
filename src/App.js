@@ -1,52 +1,26 @@
 import './App.css';
-import React, { useState } from "react";
-import Wellcome from "./components/Wellcome/Wellcome";
-import Footer from "./components/Footer/Footer";
-import Impresum from './components/Impresum/Impresum';
-import Header from './components/header';
-import Route from './components/route';
-import GustBook from './components/GustBook/gustBook';
-import Contact from './components/contact';
-import Menu from './components/menu';
-import Dropdown from './components/MobileMenuModal/MobileMenuModal'
+import Cards from './components/cards/Cards';
+import Header from './components/header/Header';
+import MobilSlider from './components/carousel/Carousel';
+import SideBar from './components/sideBar/SideBar';
+import Contact from './components/contact/Contact';
+import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 function App() {
-  const [mobileMenu, setMobileMenu] = useState(false);
-  function handleMobileMenu() {
-    setMobileMenu(!mobileMenu)
-    console.log('.----------------------')
-  };
-  const [selection, setSelection] = useState(null);
-
-  const handleSelect = (option) => {
-    setSelection(option);
-  };
-
-  const options = [
-    { label: 'Red', value: 'red' },
-    { label: 'Green', value: 'green' },
-    { label: 'Blue', value: 'blue' },
-  ];
-  return (
+  const [showMore, setShowMore] = useState(false);
+  const [showMenu, setShowMenu] = useState(false);
+  return (<BrowserRouter>
     <div className="App">
-      <Header handleMobileMenu={handleMobileMenu} />
-      <Route path={'/'}>
-        <Wellcome />
-      </Route>
-      <Route path={'/impresum'}>
-        <Impresum />
-      </Route>
-      <Route path={'/gustBook'}>
-        <GustBook />
-      </Route>
-      <Route path={'/contact'}>
-        <Contact />
-      </Route>
-      <Route path={'/menu'}>
-        <Menu />
-      </Route>
-      <Footer />
-      {mobileMenu && (<Dropdown options={options} value={selection} onChange={handleSelect}  />)}
-    </div>
+      <Header showMenu={showMenu} setShowMenu={setShowMenu} />
+
+      <Routes>
+        <Route path="/" element={<Cards showMore={showMore} setShowMore={setShowMore} />} />
+        <Route path="contact" element={<Contact />} />
+      </Routes>
+      {showMore && <MobilSlider showMore={showMore} setShowMore={setShowMore} />}
+      {showMenu && <SideBar showMenu={showMenu} setShowMenu={setShowMenu} />}
+    </div></BrowserRouter>
   );
 }
 
