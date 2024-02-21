@@ -57,7 +57,10 @@ img {
 }
 
 .cards__item {
-  display: block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
   @media(min-width: 40rem) {
     width: 100%; /* Adjusted width to make it full-width on larger screens */
@@ -98,9 +101,6 @@ img {
     border-width: 1.6px;
     height: auto;
   }
-
-
-
   .card:hover {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Hier können Sie die Werte anpassen */
   }
@@ -119,13 +119,13 @@ img {
     height: 20rem;
   }
   .card__content {
-    height: 10rem;
-    background-color: rgb(173, 245, 221);
+    height: 100%;
+    background-color: rgb(230, 255, 247);
   }
 
   .prices a{
     font-size: 1rem;
-    background-color: yellow;
+    background-color: #C8E306;
     
   }
   .distance {
@@ -139,10 +139,8 @@ img {
   }
   .card__text {
     font-size: 1rem;
-    line-height: 1.5;
+    line-height: 1.4;
   }
-  
-
 
 }
 .card__content {
@@ -185,7 +183,7 @@ img {
   font-size: 1.2rem;
   font-weight: 800;
   color: green;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.3rem;
 
 }
 .prices a{

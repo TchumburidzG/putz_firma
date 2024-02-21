@@ -30,11 +30,12 @@ nav {
 
 
 .site-name {
-  font-size: 1.3rem;
-  padding-left: 30px;
+  font-size: 1.1rem;
+  padding-left: 10px;
   margin: 0;
   cursor: pointer;
   color: #42A661;
+
   
 }
 .site-name-link{
@@ -93,7 +94,7 @@ nav ul li a {
   text-align: center;
   font-weight: 700;
   font-size: 1.1rem;
-  margin-left: 2rem;
+  margin-left: 1rem;
   color: #42A661;
   padding-right: 1rem;
 }
@@ -170,7 +171,8 @@ nav ul li a {
     font-weight: 700;
     font-size: 0.7rem;
     margin-right: 0rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
+    padding: 0%;
     padding: 0;
     width:100%;
   }

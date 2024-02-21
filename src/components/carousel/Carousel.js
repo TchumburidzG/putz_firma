@@ -18,8 +18,7 @@ import uni2 from '../../assets/pics/uni2.jpg';
 import next from '../../assets/icons/next.svg';
 import back from '../../assets/icons/back.svg';
 
-import closeIcon from '../../assets/icons/close.svg';
-import { Modal } from '../Modal/Modal';
+
 
 const allPics = {
   puzzi8: {
@@ -45,7 +44,7 @@ const allPics = {
 };
 
 
-export default function MobilSlider({ dispayedItem }) {
+export default function MobilSlider({ dispayedItem, item }) {
 
   // const closeModal = () => {
   //   setShowMore(false);
@@ -81,26 +80,26 @@ export default function MobilSlider({ dispayedItem }) {
     return Object.values(allPics[dispayedItem]).map((singlePic, index) => (
       <div key={index} className='slider-pics'>
         <div className='img-container'><img src={singlePic} alt={`Image ${index + 1}`} /></div>
-        <div className="img-decription">დაგვიკავშირდით ნომერზე:<br /> +995 574 11 57 39</div>
+        <div className="card__content">
+          <div className="model-name">ქიმწმენდი აპარატის გაქირავება </div>
+          <div className="prices">
+            <a>3 სთ- {item.price1}₾</a>
+            <a className='distance'>24 საათი {item.price2}₾</a>
+          </div>
+          <div className="card__text">
+            {item.purpose}
+          </div>
+        </div>
       </div>
     ));
   };
 
   return (
 
- <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-    {/* <div className='modal-and-slider-container '> */}
-      {/* <Modal onClose={setShowMore}> */}
-     
-        {/* <div className='close-modal' >
-          <div className='close-icon'>
-            <img src={closeIcon} onClick={closeModal}/>
-          </div>
-        </div> */}
-        <Slider {...settings}>
-          {morePics()}</Slider>
-      {/* </div> */}
-      {/* </Modal> */}
+    <div className="modal-content" >
+      <Slider {...settings}>
+        {morePics()}
+      </Slider>
     </div>
   );
 }

@@ -16,12 +16,11 @@ export default function Header({ showMenu, setShowMenu }) {
       <div className="container">
         <nav>
           <div className="site-name">
-            <h2><Link className={'site-name-link'} to="/">სახელი</Link></h2>
+            <div><Link className='site-name-link' to="/">Cleaning Tools</Link></div>
           </div>
           <ul>
             <li><Link to="/">მთავარი</Link></li>
             <li><Link to="/services">სერვისები</Link></li>
-            <li><Link to="/about">ჩვენს შესახებ</Link></li>
             <li> <Link to="/contact">კონტაქტი</Link></li>
           </ul>
           <div className='contact-links'>
