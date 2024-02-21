@@ -3,28 +3,53 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import './carousel.css';
-import dd from '../../assets/pics/puzzi81.jpg';
-import bb from '../../assets/pics/puzzi82.jpg';
-import aa from '../../assets/pics/puzzi83.jpg';
-import cc from '../../assets/pics/puzzi84.jpg';
+import puzzi81 from '../../assets/pics/puzzi81.jpg';
+import puzzi82 from '../../assets/pics/puzzi82.jpg';
+import puzzi83 from '../../assets/pics/puzzi83.jpg';
+import puzzi84 from '../../assets/pics/puzzi84.jpg';
+import puzzi85 from '../../assets/pics/puzzi85.jpg';
+import puzzi10 from '../../assets/pics/puzzi10.jpg';
+import puzzi101 from '../../assets/pics/puzzi101.jpg';
+import puzzi102 from '../../assets/pics/puzzi102.jpg';
+import puzzi8 from '../../assets/pics/puzzi8.jpg';
+import text from '../../assets/pics/text.jpg';
+import uni1 from '../../assets/pics/uni1.jpg';
+import uni2 from '../../assets/pics/uni2.jpg';
 import next from '../../assets/icons/next.svg';
 import back from '../../assets/icons/back.svg';
+
 import closeIcon from '../../assets/icons/close.svg';
 import { Modal } from '../Modal/Modal';
 
 const allPics = {
-  dd,
-  bb,
-  aa,
-  cc,
+  puzzi8: {
+    puzzi8,
+    uni1,
+    uni2,
+    text,
+    puzzi81,
+    puzzi84,
+    puzzi82,
+    puzzi83,
+    puzzi85
+  },
+  puzzi10: {
+    puzzi10,
+    uni1,
+    uni2,
+    text,
+    puzzi10,
+    puzzi101,
+    puzzi102,
+  }
 };
 
 
-export default function MobilSlider({ showMore, setShowMore }) {
+export default function MobilSlider({ dispayedItem }) {
 
-  const closeModal = () => {
-    setShowMore(false);
-  };
+  // const closeModal = () => {
+  //   setShowMore(false);
+  // };
 
   const CustomPrevArrow = ({ onClick }) => (
     <button className="custom-prev-arrow arrows" onClick={onClick}>
@@ -52,26 +77,30 @@ export default function MobilSlider({ showMore, setShowMore }) {
   };
 
   const morePics = () => {
-    return Object.values(allPics).map((singlePic, index) => (
+
+    return Object.values(allPics[dispayedItem]).map((singlePic, index) => (
       <div key={index} className='slider-pics'>
-        <img src={singlePic} alt={`Image ${index + 1}`} />
-        <p className="legend">აპარატის აღწერილობა ან რამე დამატებითი ინფორმაცია</p>
+        <div className='img-container'><img src={singlePic} alt={`Image ${index + 1}`} /></div>
+        <div className="img-decription">დაგვიკავშირდით ნომერზე:<br /> +995 574 11 57 39</div>
       </div>
     ));
   };
 
   return (
-    <div className='modal-and-slider-container'>
-      <Modal onClose={setShowMore}>
-        <div className='close-modal' >
+
+ <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+    {/* <div className='modal-and-slider-container '> */}
+      {/* <Modal onClose={setShowMore}> */}
+     
+        {/* <div className='close-modal' >
           <div className='close-icon'>
             <img src={closeIcon} onClick={closeModal}/>
           </div>
-        </div>
+        </div> */}
         <Slider {...settings}>
-
           {morePics()}</Slider>
-      </Modal>
+      {/* </div> */}
+      {/* </Modal> */}
     </div>
   );
 }

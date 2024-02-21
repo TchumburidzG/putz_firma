@@ -7,8 +7,7 @@ function Contact() {
     <div>
       <div className="contact-info">
         <p>ტელეფონი: 0761 / 61 29 17 39 </p>
-        <p>მაილი: info@ouzeria-freiburg.de</p>
-        <p>მისამართი: Lindenmattenstraße 4 79117 Freiburg </p>
+        <p>მაილი: infocleaningtools@gmail.com</p>
         <p>
 
         </p>

@@ -6,7 +6,7 @@ export function readCSV() {
       .then((data) => {
         const rows = data.replace(/\r\n/g, "\n").split("\n");
         const columns = [];
-        const headline = ["name", "price", "description", "purpose", "model"];
+        const headline = ["name", "price1", "price2", "description", "purpose", "model"];
 
         const firstRow = rows[0].split(delimiter);
 

@@ -1,11 +1,11 @@
 import React from 'react';
 import messengerIcon from '../../assets/icons/messenger.svg';
 export const Messenger= () => {
-  const userName = 'Gurami Tchumburidze '
+  const userName = 'CleaningTools • ქიმწმენდის აპარატის გაქირავება'
 
-  const initialMessage = 'Hallo, ich möchte mit dir sprechen!'; // Hier deine Nachricht eintragen
 
-  const messengerUrl = `https://m.me/${userName}?send=${encodeURIComponent(initialMessage)}`;
+
+  const messengerUrl = `https://www.facebook.com/Cleaningtoolstbilisi?mibextid=eQY6cl`;
 
  
   return (

@@ -25,7 +25,7 @@ export default function Header({ showMenu, setShowMenu }) {
             <li> <Link to="/contact">კონტაქტი</Link></li>
           </ul>
           <div className='contact-links'>
-            <div className='telephone'>ტელ:  577 30 21 06</div>
+            <div className='telephone'>ტელ:  511 334477</div>
             <WhatsApp />
             <Messenger />
             <Instagram />

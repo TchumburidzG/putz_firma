@@ -7,7 +7,7 @@
 @gray-lightest:             lighten(@gray-lighter,4%);
 */
 *,
-*::before,
+
 *::after { 
   box-sizing: border-box;
 }
@@ -49,24 +49,20 @@ img {
 }
  
 .cards {
-  display: flex;
-  flex-wrap: wrap;
+  display: block;
+  /* flex-wrap: wrap; */ /* Remove this line */
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .cards__item {
-  display: flex;
+  display: block;
   padding: 1rem;
   @media(min-width: 40rem) {
-    width: 50%;
-  }
-  @media(min-width: 56rem) {
-    width: 33.3333%;
+    width: 100%; /* Adjusted width to make it full-width on larger screens */
   }
 }
-
 
 
 
@@ -96,10 +92,60 @@ img {
   border-width: 1.6px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Hier können Sie die Werte anpassen */
 }
+@media only screen and (max-width: 600px) {
+  .card {
+    border: solid yellow;
+    border-width: 1.6px;
+    height: auto;
+  }
+
+
+
+  .card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Hier können Sie die Werte anpassen */
+  }
+  .card {
+    padding: 0;
+    margin: 0;
+  }
+  .card__image {
+    display: flex;
+    flex-direction: column;
+    background-color: red;
+  }
+  .card__image  img {
+    padding: 0;
+    margin: 0;
+    height: 20rem;
+  }
+  .card__content {
+    height: 10rem;
+    background-color: rgb(173, 245, 221);
+  }
+
+  .prices a{
+    font-size: 1rem;
+    background-color: yellow;
+    
+  }
+  .distance {
+    margin-left: 1rem;
+  }
+
+  .see-more {
+    margin-top: 0.2rem;
+    font-style: italic;
+    align-self: flex-end; 
+  }
+  .card__text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+
+
+}
 .card__content {
-  display: flex;
-  flex: 1 2 3 ;
-  flex-direction: column;
   padding: 1rem;
 }
 
@@ -109,37 +155,18 @@ img {
   background-size: cover;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  filter: contrast(80%);
-  
+  filter: contrast(90%);
   overflow: hidden;
   position: relative;
-  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);;
-  &::before {
-    content: "";
-	  display: block;
-    padding-top: 56.25%; 
-  }
-  @media(min-width: 40rem) {
-    &::before {
-      padding-top: 66.6%; 
-    }
-  }
+  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.card__image--flowers {
-  background-image: url(https://unsplash.it/800/600?image=82);
-}
-
-.card__image--river {
-  background-image: url(https://unsplash.it/800/600?image=11);
-}
-
-.card__image--record {
-  background-image: url(https://unsplash.it/800/600?image=39);
-}
-
-.card__image--fence {
-  background-image: url('../../assets/pics/puzzi80.jpg');
+.card__image img {
+  height: 100%;
+  width: auto;
 }
 
 .card__title{
@@ -151,9 +178,25 @@ img {
 }
 
 .card__text {
-  flex: 1 1 auto;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.5;
-  margin-bottom: 1.25rem;
 }
+.model-name{
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: green;
+  margin-bottom: 0.8rem;
 
+}
+.prices a{
+  font-size: 1rem;
+  background-color: yellow;
+  
+}
+.distance {
+  margin-left: 1rem;
+}
+.see-more {
+  margin-top: 0.2rem;
+  font-style: italic;
+}

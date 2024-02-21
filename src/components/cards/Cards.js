@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './cards.css';
 import { readCSV } from '../../Untils/utils';
-import puzzi80 from '../../assets/pics/puzzi80.jpg'
-    //<img src={puzzi80} />*/
-export default function Cards({ showMore, setShowMore }) {
-  const handleClick = () => {
+import puzzi8 from '../../assets/pics/puzzi8.jpg';
+import puzzi10 from '../../assets/pics/puzzi10.jpg';
+import MobilSlider from '../carousel/Carousel'
+export default function Cards({ setShowMore, setDispeyedItem, dispayedItem }) {
+  const handleClick = (itemName) => {
     setShowMore(true);
+    setDispeyedItem(itemName)
   }
   const [csvData, setCsvData] = useState();
   useEffect(() => {
@@ -17,28 +19,39 @@ export default function Cards({ showMore, setShowMore }) {
       }
     };
     fetchData();
-
   }, [setCsvData]); // Empty dependency array ensures useEffect runs only once on component mount
+  const getImg = (name) => {
+    if (name === 'puzzi8') {
+      return puzzi8
+    } else {
+      return puzzi10
+    }
+  }
   const besika = () => {
     if (csvData) {
       return csvData.map((item, index) => (
-        <li className="cards__item" key={index} onClick={handleClick}>
-          <div className="card">
-            <div className="card__image card__image--fence">
-          
+        <li className="cards__item" key={index} onClick={() => { handleClick(item.name) }} >
+          {/* <div className="card"> */}
+          <MobilSlider dispayedItem={dispayedItem} />
+            {
+            /* <div className="card__image ">
+              <img src={getImg(item.name)} />
             </div>
             <div className="card__content">
-              <div className="card__title"> {item.name} </div>
-              <div className="">მოდელი: {item.model} </div>
-              <div className="">
-                <div>3 საათი 50₾</div>
-                <div>24 საათი 80₾</div> 
+              <div className="model-name">ქიმწმენდი აპარატის გაქირავება </div>
+              <div className="prices">
+             
+                  <a>3 სთ- {item.price1}₾</a> 
+                  <a className='distance'>24 საათი {item.price2}₾</a>
+             
                 </div>
               <div className="card__text">
-                {item.purpose} წაიკითხე მეტი...
+                {item.purpose}
               </div>
-            </div>
-          </div>
+              <div className='see-more'> მეტის სანახავად გახსენი ფოტო</div>
+            </div> */
+            }
+          {/* </div> */}
         </li>
       ));
     }

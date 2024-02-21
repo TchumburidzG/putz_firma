@@ -2,26 +2,10 @@ import { Sidebar } from 'flowbite-react';
 import { Modal } from '../Modal/Modal';
 import { Link } from "react-router-dom";
 
-const menu = {
-  "Home": "მთავარი",
-  "About Us": "ჩვენს შესახებ",
-  "Services": "სერვისები",
-  "Contact": "კონტაქტი"
-};
+
 
 const SideBar = ({ showMenu, setShowMenu }) => {
-  const closeModal = () => {
-    setShowMenu(false);
-  };
 
-  const georgianMenu = () => {
-    return Object.entries(menu).map(([englishKey, georgianValue]) => (
-      <Sidebar.Item key={englishKey} href="#" className='sidebar-names'>
-        {georgianValue}
-      </Sidebar.Item>
-    ));
-  };
-  // <Link to="/contact">კონტაქტი</Link>
   return (
     <Modal onClose={setShowMenu}>
       <div className={`sidebar-container ${showMenu ? 'sidebar-open' : ''}`}>

@@ -10,17 +10,27 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   const [showMore, setShowMore] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  return (<BrowserRouter>
+  const [dispayedItem, setDispeyedItem] = useState('puzzi8')
+  return (
+    <BrowserRouter>
     <div className="App">
       <Header showMenu={showMenu} setShowMenu={setShowMenu} />
 
       <Routes>
-        <Route path="/" element={<Cards showMore={showMore} setShowMore={setShowMore} />} />
+          <Route path="/"
+            element={<Cards
+              setShowMore={setShowMore}
+              setDispeyedItem={setDispeyedItem}
+              dispayedItem={dispayedItem}
+            />
+            }
+          />
         <Route path="contact" element={<Contact />} />
       </Routes>
-      {showMore && <MobilSlider showMore={showMore} setShowMore={setShowMore} />}
+        {showMore && <MobilSlider setShowMore={setShowMore} dispayedItem={dispayedItem} />}
       {showMenu && <SideBar showMenu={showMenu} setShowMenu={setShowMenu} />}
-    </div></BrowserRouter>
+      </div>
+    </BrowserRouter>
   );
 }
 
