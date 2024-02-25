@@ -35,13 +35,13 @@
 .group li:hover{
   background-color:  rgba(72, 72, 68, 0.968)
 }
-.sidebar-icon {
-  padding-right: 10px;
-  margin: 0;
-  padding-left: 0;
-}
+
 
 .sidebar-names {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
   padding: 0;
   margin: 0;
   font-size: 1rem; /* Adjust the font size as needed */
@@ -49,10 +49,27 @@
 .sidebar-names:hover{
   background-color: beige;
 }
+.sidebar-icon {
+  height: 2.2rem;
+  width: 2.2rem;
+  padding-right: 10px;
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  fill: rgb(1, 38, 107);
+}
 
 .sidebar-names a{
+  display: flex;
+  flex-direction: row;
+  text-decoration: none; 
+  align-items:flex-start;
+  justify-content: flex-start;
   color:rgb(72, 72, 72);
   font-weight: 600;
+  padding: 0;
+  margin: 0;
 }
 .sidebar-container {
   height: 0rem;

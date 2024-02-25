@@ -66,7 +66,7 @@ export default function MobilSlider({ dispayedItem, item }) {
     
           <div className="prices">
             <a>3 სთ- {item.price1}₾</a>
-            <a className='distance'>24 საათი {item.price2}₾</a>
+            <a className='distance'>24 სთ- {item.price2}₾</a>
           </div>
           <div className="card__text">
             {item.purpose}

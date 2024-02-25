@@ -24,6 +24,7 @@
   height: 40rem;
   border-radius: 5px;
   border: none;
+  border-radius: 5px;
 }
 .slider-pics {
   display: flex;
@@ -39,12 +40,14 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  border-radius: 5px;
 }
 .img-container img {
   height: 100%;
   width: auto;
   max-width: 100%; /* Add this to ensure the image doesn't exceed its container */
   max-height: 100%; /* Add this for safety */
+  border-radius: 5px;
 }
 .img-decription {
   margin-top: 0;
@@ -80,6 +83,7 @@
 .arrows:active {
   background-color: #f6f6f6;
 }
+
 @media only screen and (max-width: 600px) {
   .arrows:hover,
   .arrows:active {
@@ -94,6 +98,7 @@
     height: 29rem;
     border-radius: 5px;
     border: none;
+    border-radius: 5px;
   }
   .slider-pics {
     display: flex;
@@ -160,4 +165,8 @@
 }
 .close-icon img {
   height: 100%;
+}
+
+.slick-slider, slick-slide, slick-list {
+  border-radius: 5px;
 }

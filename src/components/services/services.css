@@ -1,3 +1,72 @@
 .services-container{
-  background-color: aqua;
+  padding:15px  30px;
+}
+
+.services-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(1, 38, 107);
+}
+
+.list-services {
+  list-style-type: none;
+}
+
+.list-services {
+  list-style: none;
+  padding: 0;
+}
+
+.list-services li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* Adjust as needed */
+}
+
+.services-icon {
+  height: 4.8rem;
+  width: 4.8rem;
+  fill: rgb(1, 38, 107);
+  margin-right: 10px;
+  margin-left: 0px;
+  border-radius: 50px;
+}
+
+.service-offers {
+  width: 85%;
+  font-weight: 200;
+  font-size: 1.2rem;
+}
+
+.service-offers a {
+  background-color: #f8dc75;
+}
+
+.other-services {
+  font-weight: 200;
+  font-size: 1.2rem;
+  padding-top: 3rem;
+}
+
+.contact-us {
+  display: flex;
+  align-items: center; 
+  margin-top: 1rem;
+  font-weight: 200;
+  font-size: 1rem;
+}
+
+
+
+.my-messenger {
+  margin-left: 10px; /* Adjust this margin as needed */
+}
+
+.my-messenger a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from the parent container */
+  font-weight: bold; /* Adjust font weight as needed */
 }

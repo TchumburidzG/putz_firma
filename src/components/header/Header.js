@@ -8,6 +8,7 @@ import MenuIcon from '../../assets/icons/menu.svg';
 import { Link } from "react-router-dom";
 import cover from '../../assets/pics/cover.jpg';
 import phone from '../../assets/icons/phone.svg';
+const messengerUrl = 'https://www.facebook.com/Cleaningtoolstbilisi?mibextid=eQY6cl';
 
 export default function Header({ showMenu, setShowMenu }) {
   const toggleMenu = () => {
@@ -31,7 +32,7 @@ export default function Header({ showMenu, setShowMenu }) {
               <div className='contact-links'>
                 <div className='contact-icons'>
                 <WhatsApp className='whatsapp-container-mobile' />
-                <Messenger className='messenger-container-mobile' />
+                <Messenger className='messenger-container-mobile' messengerUrl={messengerUrl} />
                 <Instagram className='instagram-container-mobile' />
                 <TikTok className='tiktok-container-mobile' />
               </div>
