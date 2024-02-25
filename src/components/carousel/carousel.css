@@ -34,9 +34,17 @@
 }
 .img-container{
   height: 80%;
+  width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+}
+.img-container img {
+  height: 100%;
+  width: auto;
+  max-width: 100%; /* Add this to ensure the image doesn't exceed its container */
+  max-height: 100%; /* Add this for safety */
 }
 .img-decription {
   margin-top: 0;
@@ -96,29 +104,42 @@
   }
   .img-container{
     height: 80%;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
-  .img-decription {
-    height:19%;
-    margin: 0;
-    padding: 0.rem 1rem;
+  .img-container img{
+    height: 100%;
+    width: auto;
+    
   }
-  
-  .slider-pics img {
-     height: 100%;
-     width: auto;
+  .img-container {
+    height: 80%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
   }
 
+
+  .img-container img {
+    height: 100%;
+    width: auto;
+    max-width: 100%; 
+    max-height: 100%; 
+  }
 }
+
 .custom-next-arrow {
-  right: 0; /* Position at the right edge */
+  right: 0; 
   z-index: 1;
 }
 
 .custom-prev-arrow {
-  left: 0; /* Position at the left edge */
+  left: 0; 
 
   z-index: 1;
 }

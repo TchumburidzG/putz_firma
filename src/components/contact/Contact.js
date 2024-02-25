@@ -6,7 +6,7 @@ function Contact() {
   return (
     <div>
       <div className="contact-info">
-        <p>ტელეფონი: 0761 / 61 29 17 39 </p>
+        <p>ტელეფონი:+995 511 33 44 77</p>
         <p>მაილი: infocleaningtools@gmail.com</p>
         <p>
 

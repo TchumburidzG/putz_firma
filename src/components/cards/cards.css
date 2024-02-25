@@ -119,7 +119,7 @@ img {
     height: 20rem;
   }
   .card__content {
-    height: 100%;
+    height: 30%;
     background-color: rgb(230, 255, 247);
   }
 
@@ -144,7 +144,7 @@ img {
 
 }
 .card__content {
-  padding: 1rem;
+  padding: 0.3rem;
 }
 
 .card__image {

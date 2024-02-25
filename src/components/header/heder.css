@@ -4,6 +4,7 @@ body {
   background-color: #FFFFFF;
   position: relative;
   padding: 0;
+  background-color: rgb(222, 223, 223);
 }
 
 header {
@@ -11,15 +12,16 @@ header {
   padding: 0.5rem 0;
   margin: 0;
   width: 100%;
-  border-radius: 4px;
+  height: 7rem;
 }
 
 .container {
   max-width: 100%;
+  height: 100%;
   margin: 0;
   width: 100%;
-  padding: 0rem 1rem;
-  border-radius: 4px;
+  padding: 0.2rem 1rem;
+  
 }
 
 nav {
@@ -42,6 +44,7 @@ nav {
   text-decoration: none;
   background-color: inherit;
   color: inherit;
+  font-size: 3rem;
 }
 .site-name h2{
   margin: 0
@@ -81,7 +84,7 @@ nav ul li a {
 .messenger-container img{
   height: 30px;
   width: 30px;
-  padding: 3px;
+
 }
 .whatsapp-container img {
   height: 30px;
@@ -111,15 +114,24 @@ nav ul li a {
   nav ul {
     display: none;
   }
+  .container {
+    padding-right: 0.3rem;
+    
+  }
 
   .menu-btn {
     display: block;
     cursor: pointer;
-    font-size: 1.5rem;
-  }
-  .menu-btn img {
     height: 2rem;
-    fill: #42A661
+    width: 3.5rem;
+    padding: 0;
+    margin: 0;
+    }
+  .menu-btn img {
+    height: 2.3rem;
+    fill: #42A661;
+    padding: 0;
+    margin: 0;
   }
 
   /* Show the navigation links when menu-btn is clicked */
@@ -133,9 +145,12 @@ nav ul li a {
     background: #FCFF52;
   }
   .site-name {
+    width: auto;
     padding-left: 0rem;
     margin-left: 0rem;
     font-size: 0.8rem;
+    font-weight: 600;
+    color: rgb(66, 66, 66);
   }
 
   .messenger-container {
@@ -144,7 +159,6 @@ nav ul li a {
   }
   .whatsapp-container {
     width: 2.3rem;
-    margin-left: 1rem;
   
   }
 
@@ -169,11 +183,54 @@ nav ul li a {
     align-items: center; /* Add this for vertical centering */
     text-align: center;
     font-weight: 700;
-    font-size: 0.7rem;
-    margin-right: 0rem;
-    margin-left: 1rem;
-    padding: 0%;
-    padding: 0;
+    font-size: 1.1rem;
+    margin: 0px;
+    padding:  0px;
     width:100%;
+    color: rgb(44, 44, 44);
+  }
+  .site-name-link{
+    width: auto;
+    text-decoration: none;
+    background-color: inherit;
+    color: inherit;
+    font-size: 1.3rem;
+  }
+  header {
+    background: #FFFF00;
+    padding: 0.2rem 0;
+    margin: 0;
+    width: 100%;
+    height: 5rem;
+  }
+  .contact-links-mobile {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .contact-icons{
+    width: auto;
+    padding: 0;
+    margin: 0;
+  }
+  .messenger-container,
+  .whatsapp-container,
+  .instagram-container,
+  .tiktok-container {
+    padding: 0rem;
+  }
+
+  .messenger-container img,
+  .whatsapp-container img,
+  .instagram-container img,
+  .tiktok-container img {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .contact-links{
+    width: 10rem;
   }
 }

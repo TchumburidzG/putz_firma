@@ -4,6 +4,7 @@ import Header from './components/header/Header';
 import MobilSlider from './components/carousel/Carousel';
 import SideBar from './components/sideBar/SideBar';
 import Contact from './components/contact/Contact';
+import Services from './components/services/Services';
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -26,6 +27,7 @@ function App() {
             }
           />
         <Route path="contact" element={<Contact />} />
+        <Route path="services" element={<Services />} />
       </Routes>
         {showMore && <MobilSlider setShowMore={setShowMore} dispayedItem={dispayedItem} />}
       {showMenu && <SideBar showMenu={showMenu} setShowMenu={setShowMenu} />}

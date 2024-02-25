@@ -8,9 +8,11 @@
 }
 
 .vertical-items {
-  /* Fügen Sie bei Bedarf weitere benutzerdefinierte Stile hinzu */
+  height: 10rem;
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: column; /* Ändern Sie die Ausrichtung der Sidebar-Elemente auf vertikal */
+  flex-direction: column;
 }
 .sidebar-container{
   z-index: 100;
@@ -24,22 +26,36 @@
 }
 
 .group {
-  background-color: rgb(240, 240, 74);
-  margin-top: 0;
+  background-color: rgba(240, 240, 74, 0.968);
+  margin: 0;
   padding: 0;
   border-radius: 0.5rem;
   height: 14rem;transition: transform 1s ease-in-out
-
+}
+.group li:hover{
+  background-color:  rgba(72, 72, 68, 0.968)
+}
+.sidebar-icon {
+  padding-right: 10px;
+  margin: 0;
+  padding-left: 0;
 }
 
 .sidebar-names {
-  padding-left: 0;
-  padding-right: 0.1rem;
-  margin-left: 0;
-  color: #42A661;
+  padding: 0;
+  margin: 0;
   font-size: 1rem; /* Adjust the font size as needed */
-  font-weight: bold;
-  ;
+}
+.sidebar-names:hover{
+  background-color: beige;
+}
+
+.sidebar-names a{
+  color:rgb(72, 72, 72);
+  font-weight: 600;
+}
+.sidebar-container {
+  height: 0rem;
 }
 .sidebar-open {
   transform: translateX(0); /* Slide in from right when sidebar is open */
