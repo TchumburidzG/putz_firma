@@ -15,9 +15,6 @@ const SideBar = ({ showMenu, setShowMenu }) => {
             <Sidebar.ItemGroup className="vertical-sidebar group">
               <Sidebar.Item  className='sidebar-names'>
                 <Link to="/"> <Home className='sidebar-icon' /> მთავარი</Link> </Sidebar.Item>
-              <Sidebar.Item   className='sidebar-names'>
-                <Link to="/services"> <Clean className='sidebar-icon' />სერვისები</Link>
-              </Sidebar.Item>
               <Sidebar.Item  className='sidebar-names'>
                 <Link to="/contact"><Contact className='sidebar-icon' />კონტაქტი</Link>
               </Sidebar.Item>

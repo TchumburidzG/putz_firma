@@ -20,19 +20,18 @@ function App() {
       <Routes>
           <Route path="/"
             element={<Cards
-              setShowMore={setShowMore}
               setDispeyedItem={setDispeyedItem}
               dispayedItem={dispayedItem}
             />
             }
           />
-        <Route path="contact" element={<Contact />} />
-        <Route path="services" element={<Services />} />
-      </Routes>
-        {showMore && <MobilSlider setShowMore={setShowMore} dispayedItem={dispayedItem} />}
+          <Route path="contact" element={<Contact />} />
+        </Routes>
       {showMenu && <SideBar showMenu={showMenu} setShowMenu={setShowMenu} />}
       </div>
+
     </BrowserRouter>
+
   );
 }
 

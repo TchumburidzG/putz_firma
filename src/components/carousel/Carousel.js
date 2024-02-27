@@ -31,7 +31,7 @@ const allPics = {
 };
 
 
-export default function MobilSlider({ dispayedItem, item }) {
+export default function MobilSlider({  item }) {
 
   const CustomPrevArrow = ({ onClick }) => (
     <button className="custom-prev-arrow arrows" onClick={onClick}>

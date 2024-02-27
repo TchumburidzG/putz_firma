@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './cards.css';
 import { readCSV } from '../../Untils/utils';
 import MobilSlider from '../carousel/Carousel'
+import Services from '../services/Services';
 export default function Cards({ dispayedItem }) {
   const [csvData, setCsvData] = useState();
   useEffect(() => {
@@ -23,5 +24,9 @@ export default function Cards({ dispayedItem }) {
       ));
     }
   };
-  return <ul className="cards">{cards()}</ul>;
+  return (
+    <div className='body-container'>
+      <ul className="cards">{cards()}</ul>
+      <Services />
+    </div>);
 }

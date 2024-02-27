@@ -5,7 +5,7 @@ export const TikTok = () => {
   const tiktokUrl = `https://www.tiktok.com/@${username}`;
 
   return (
-    <a className='messenger-container' href={tiktokUrl} target="_blank" rel="noopener noreferrer">
+    <a className='messenger-container padding' href={tiktokUrl} target="_blank" rel="noopener noreferrer">
       <img src={tiktokIcon} alt="image Icon"/>
     </a>
   );

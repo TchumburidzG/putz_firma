@@ -20,7 +20,7 @@ function Services(){
         <li>
           <img src={auto} className='services-icon' />
           <div className='service-offers'>
-            აპარატის თქვენთან მოტანა და წაღება <a>უფასოდ</a>
+            აპარატის თქვენთან მოტანა და წაღება <a>5-10 ლარი</a> თბილისის მასშტაბით
           </div>
         </li>
         <li>

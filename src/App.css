@@ -1,5 +1,16 @@
-/* Add this to your existing CSS or create a new file */
+.body-container {
+  justify-content: center;
+  align-items: center;
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+@media only screen and (max-width: 600px){
+  .body-container {
 
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}
 
 .vertical-sidebar {
   height: 100%; /* Stellen Sie sicher, dass die Sidebar die gesamte Höhe des Elternelements einnimmt */
@@ -137,4 +148,21 @@
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.padding{
+  padding: 4px;
+}
+.slick-dots li button:before {
+  font-size: 13px !important;
+  font-weight: 900 !important;
+}
+
+.slick-slider{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.slick-list {
+  border-radius: 4px;
 }
