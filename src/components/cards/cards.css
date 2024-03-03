@@ -19,7 +19,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  border: none;
 }
 
 img {
@@ -46,6 +46,7 @@ img {
   list-style: none;
   padding:15px  30px;
   width: auto;
+  border: none;
 }
 
 .cards__item {

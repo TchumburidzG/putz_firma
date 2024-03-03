@@ -9,6 +9,7 @@ import puzzi83 from '../../assets/pics/puzzi83.jpg';
 import puzzi103 from '../../assets/pics/puzzi103.jpg';
 import puzzi10 from '../../assets/pics/puzzi10.jpg';
 import puzzi101 from '../../assets/pics/puzzi101.jpg';
+import puzzi102 from '../../assets/pics/puzzi102.jpg';
 import puzzi8 from '../../assets/pics/puzzi8.jpg';
 import text from '../../assets/pics/text.jpg';
 import next from '../../assets/icons/next.svg';
@@ -26,6 +27,7 @@ const allPics = {
     puzzi10,
     text,
     puzzi101,
+    puzzi102,
     puzzi103,
   }
 };

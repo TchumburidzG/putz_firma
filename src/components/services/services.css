@@ -1,15 +1,17 @@
-.services-container{
-  padding:15px  30px;
-}
-
 .services-title {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   color: rgb(1, 38, 107);
+
 }
+
+.services-container{
+  padding:15px  30px;
+}
+
 
 .list-services {
   list-style-type: none;
@@ -27,18 +29,17 @@
 }
 
 .services-icon {
-  height: 4.8rem;
-  width: 4.8rem;
+  height: 6rem;
+  width: 6rem;
   fill: rgb(1, 38, 107);
   margin-right: 10px;
   margin-left: 0px;
   border-radius: 50px;
 }
-
 .service-offers {
   width: 85%;
   font-weight: 200;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
 }
 
 .service-offers a {
@@ -47,19 +48,18 @@
 
 .other-services {
   font-weight: 200;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   padding-top: 3rem;
 }
 
 .contact-us {
   display: flex;
   align-items: center; 
-  margin-top: 1rem;
+  justify-content: center;
+  margin-top: 1.2rem;
   font-weight: 200;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
-
-
 
 .my-messenger {
   margin-left: 10px; /* Adjust this margin as needed */
@@ -69,4 +69,28 @@
   text-decoration: none;
   color: inherit; /* Inherit color from the parent container */
   font-weight: bold; /* Adjust font weight as needed */
+}
+
+@media only screen and (max-width: 900px) {
+  .services-title {
+    font-size: 1.5rem;
+  }
+  .services-icon {
+    height: 4.8rem;
+    width: 4.8rem;
+  }
+
+  .service-offers {
+    width: 85%;
+    font-size: 1.2rem;
+  }
+
+  .other-services {
+    font-size: 1.2rem;
+    padding-top: 3rem;
+  }
+  .contact-us {
+    font-size: 1rem;
+    margin-top: 1.2rem;
+  }
 }

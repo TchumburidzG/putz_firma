@@ -26,7 +26,7 @@ function Services(){
         <li>
           <img src={present} className='services-icon' />
           <div className='service-offers'>
-            სპეციალური ანტიალერგიული საწმენდი ხსნარი <a>საჩუქრად</a>
+            სპეციალური ანტიალერგიული ფხვნილი <a>საჩუქრად</a>
           </div>
         </li>
         <li>

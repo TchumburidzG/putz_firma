@@ -29,9 +29,7 @@ function App() {
         </Routes>
       {showMenu && <SideBar showMenu={showMenu} setShowMenu={setShowMenu} />}
       </div>
-
     </BrowserRouter>
-
   );
 }
 

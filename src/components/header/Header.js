@@ -15,9 +15,9 @@ export default function Header({ showMenu, setShowMenu }) {
     setShowMenu(!showMenu);
   };
   return (
-    <div>
-    <header>
-      <div className="container">
+
+    <header className='header-container'>
+      <div className="header">
         <nav>
           <div className="site-name">
             <div><Link className='site-name-link' to="/">Cleaning Tools</Link></div>
@@ -41,8 +41,7 @@ export default function Header({ showMenu, setShowMenu }) {
           </div>
           </nav>
       </div>
+      <div className='cover-container' > <img src={cover} /></div>
     </header>
-      <div> <img src={cover} /></div>
-    </div>
   );
 }
