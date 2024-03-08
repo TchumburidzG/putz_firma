@@ -7,8 +7,7 @@ import floor from '../../assets/pics/floor.jpg';
 import afterRepair from '../../assets/pics/afterrepair.jpg';
 import general from '../../assets/pics/general.jpg';
 import furniture from '../../assets/pics/furniture.jpeg';
-const messengerUrl = 'https://www.facebook.com/cleanservicegeo';
-
+import vitrine from '../../assets/pics/vitrine.jpg';
 
 function Services(){
   return (
@@ -66,11 +65,17 @@ function Services(){
             </div>
             <img src={furniture} className='services-icon' />
           </li>
+          <li>
+            <div className='service-offers'>
+              ვიტრაჟების წმენდას
+            </div>
+            <img src={vitrine} className='services-icon' />
+          </li>
         </ul>
         <div className='contact-us'>
           გვნახე ფეისბუქზე
-          <div className='my-messenger'>
-            <Messenger messengerUrl={messengerUrl} />
+          <div className='my-messenger' >
+            <Messenger messengerUrl={'https://www.facebook.com/cleanservicegeo'} />
             <a href='https://www.facebook.com/cleanservicegeo' >
               cleanservice.ge
             </a>

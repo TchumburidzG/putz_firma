@@ -5,8 +5,8 @@ export const WhatsApp = () => {
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
   return (
-    <a className='whatsapp-container padding' href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-      <img src={whatsAppIcon} alt="image Icon"/>
+    <a className='whatsapp-container  padding' href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+      <img className='draging' src={whatsAppIcon} alt="image Icon"/>
     </a>
   );
 };

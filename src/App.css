@@ -184,3 +184,7 @@
 .slick-list {
   border-radius: 4px;
 }
+.draging{
+  -webkit-user-drag: none;
+  user-drag: none;
+}
