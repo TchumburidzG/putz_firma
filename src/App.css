@@ -1,5 +1,34 @@
-/* Add this to your existing CSS or create a new file */
-
+.body-container {
+  display: block;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15rem;
+  margin-right: 15rem;
+}
+@media only screen and (max-width: 1300px){
+  .body-container {
+    margin-left: 10rem;
+    margin-right: 10rem;
+  }
+}
+@media only screen and (max-width: 1100px){
+  .body-container {
+    margin-left: 7rem;
+    margin-right: 7rem;
+  }
+}
+@media only screen and (max-width: 900px){
+  .body-container {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+}
+@media only screen and (max-width: 750px){
+  .body-container {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}
 
 .vertical-sidebar {
   height: 100%; /* Stellen Sie sicher, dass die Sidebar die gesamte Höhe des Elternelements einnimmt */
@@ -35,13 +64,13 @@
 .group li:hover{
   background-color:  rgba(72, 72, 68, 0.968)
 }
-.sidebar-icon {
-  padding-right: 10px;
-  margin: 0;
-  padding-left: 0;
-}
+
 
 .sidebar-names {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: row;
   padding: 0;
   margin: 0;
   font-size: 1rem; /* Adjust the font size as needed */
@@ -49,10 +78,27 @@
 .sidebar-names:hover{
   background-color: beige;
 }
+.sidebar-icon {
+  height: 2.2rem;
+  width: 2.2rem;
+  padding-right: 10px;
+  margin: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  fill: rgb(1, 38, 107);
+}
 
 .sidebar-names a{
+  display: flex;
+  flex-direction: row;
+  text-decoration: none; 
+  align-items:flex-start;
+  justify-content: flex-start;
   color:rgb(72, 72, 72);
   font-weight: 600;
+  padding: 0;
+  margin: 0;
 }
 .sidebar-container {
   height: 0rem;
@@ -120,4 +166,25 @@
   width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.padding{
+  padding: 4px;
+}
+.slick-dots li button:before {
+  font-size: 13px !important;
+  font-weight: 900 !important;
+}
+
+.slick-slider{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.slick-list {
+  border-radius: 4px;
+}
+.draging{
+  -webkit-user-drag: none;
+  user-drag: none;
 }

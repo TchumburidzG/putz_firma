@@ -1,9 +1,9 @@
 import { Sidebar } from 'flowbite-react';
 import { Modal } from '../Modal/Modal';
 import { Link } from "react-router-dom";
-import clean from '../../assets/icons/clean.svg';
-import home from '../../assets/icons/home.svg';
-import contact from '../../assets/icons/contact.svg';
+import { ReactComponent as Clean } from '../../assets/icons/clean.svg';
+import { ReactComponent as Home } from '../../assets/icons/home.svg';
+import { ReactComponent as Contact } from '../../assets/icons/contact.svg';
 
 const SideBar = ({ showMenu, setShowMenu }) => {
 
@@ -14,13 +14,9 @@ const SideBar = ({ showMenu, setShowMenu }) => {
           <Sidebar.Items className="vertical-items">
             <Sidebar.ItemGroup className="vertical-sidebar group">
               <Sidebar.Item  className='sidebar-names'>
-                <Link to="/"><img src={home} className='sidebar-icon' />მთავარი</Link>
-              </Sidebar.Item>
-              <Sidebar.Item   className='sidebar-names'>
-                <Link to="/services"> <img src={clean} className='sidebar-icon'/>სერვისები</Link>
-              </Sidebar.Item>
+                <Link to="/"> <Home className='sidebar-icon' /> მთავარი</Link> </Sidebar.Item>
               <Sidebar.Item  className='sidebar-names'>
-                <Link to="/contact"><img src={contact} className='sidebar-icon' />კონტაქტი</Link>
+                <Link to="/contact"><Contact className='sidebar-icon' />კონტაქტი</Link>
               </Sidebar.Item>
             </Sidebar.ItemGroup>
           </Sidebar.Items>

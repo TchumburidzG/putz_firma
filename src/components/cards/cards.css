@@ -1,11 +1,4 @@
-/*
-@gray-darker:               #444444;
-@gray-dark:                 #696969;
-@gray:                      #999999;
-@gray-light:                #cccccc;
-@gray-lighter:              #ececec;
-@gray-lightest:             lighten(@gray-lighter,4%);
-*/
+
 *,
 
 *::after { 
@@ -26,7 +19,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
+  border: none;
 }
 
 img {
@@ -50,44 +43,24 @@ img {
  
 .cards {
   display: block;
-  /* flex-wrap: wrap; */ /* Remove this line */
   list-style: none;
-  margin: 0;
-  padding: 0;
+  padding:15px  30px;
+  width: auto;
+  border: none;
 }
 
 .cards__item {
+  margin-bottom: 4rem;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  @media(min-width: 40rem) {
+  @media(min-width: 600px) {
     width: 100%; /* Adjusted width to make it full-width on larger screens */
   }
 }
 
-
-
-
-
-.card {
-  background-color: gray-dark;
-  border-radius: 0.5rem;
-  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  transition: box-shadow 0.5s cubic-bezier(.43, .41, .22, .91);
-  border: solid transparent; /* Add a transparent border */
-  width: 100%;
-  &:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    .card__image {
-      filter: contrast(100%);
-    }
-  }
-}
 
 
 .card:hover {
@@ -119,7 +92,7 @@ img {
     height: 20rem;
   }
   .card__content {
-    height: 30%;
+    
     background-color: rgb(230, 255, 247);
   }
 
@@ -144,7 +117,7 @@ img {
 
 }
 .card__content {
-  padding: 0.3rem;
+  padding: 0.5rem 1rem ;
 }
 
 .card__image {
@@ -188,7 +161,7 @@ img {
 }
 .prices a{
   font-size: 1rem;
-  background-color: yellow;
+  background-color: #F8DC75;
   
 }
 .distance {

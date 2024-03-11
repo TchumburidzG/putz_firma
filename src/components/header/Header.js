@@ -1,5 +1,5 @@
 import React from 'react';
-import './heder.css';
+import './hedear.css';
 import { WhatsApp } from '../socMedia/Whatsapp';
 import { Messenger } from '../socMedia/Messanger';
 import { Instagram } from '../socMedia/Instagram';
@@ -14,26 +14,25 @@ export default function Header({ showMenu, setShowMenu }) {
     setShowMenu(!showMenu);
   };
   return (
-    <div>
-    <header>
-      <div className="container">
+
+    <header className='header-container'>
+      <div className="header">
         <nav>
           <div className="site-name">
             <div><Link className='site-name-link' to="/">Cleaning Tools</Link></div>
           </div>
           <ul>
             <li><Link to="/">მთავარი</Link></li>
-            <li><Link to="/services">სერვისები</Link></li>
             <li> <Link to="/contact">კონტაქტი</Link></li>
           </ul>
           
-              <div className='telephone'><img src= {phone} style={{paddingRight: '4px'}}/>511 33 44 77</div>
+          <div className='telephone'><img className='draging' src={phone} style={{ paddingRight: '4px' }} />511 33 44 77</div>
               <div className='contact-links'>
                 <div className='contact-icons'>
-                <WhatsApp className='whatsapp-container-mobile' />
-                <Messenger className='messenger-container-mobile' />
-                <Instagram className='instagram-container-mobile' />
-                <TikTok className='tiktok-container-mobile' />
+              <WhatsApp />
+              <Messenger />
+              <Instagram />
+              <TikTok />
               </div>
           </div>
           <div className="menu-btn" onClick={toggleMenu} >
@@ -41,8 +40,7 @@ export default function Header({ showMenu, setShowMenu }) {
           </div>
           </nav>
       </div>
+      <div className='cover-container' > <img src={cover} /></div>
     </header>
-      <div> <img src={cover} /></div>
-    </div>
   );
 }
